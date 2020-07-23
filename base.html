@@ -1,0 +1,174 @@
+<html>
+<head>
+	<title>Farmilk.com</title>
+
+	<style media="screen">
+	*{
+
+		margin-left: 10px;
+		margin-right: 10px;
+	  padding: 0%;
+	  font-family: century gothic;
+
+	}/*for all*/
+	header{
+	  background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("bg8.jpg");
+	  height: 40%;
+	  background-size: cover;
+	  background-position: center;
+		position:relative;
+
+	}
+
+
+	.navbar {
+overflow: hidden;
+background-color: #333;
+font-family: Arial;
+background: transparent;
+padding-left: 40px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+font-size: 16px;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit; /* Important for vertical align on mobile phones */
+margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color: red+;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.logo{
+  padding: 4px 700px 0px 30px ;
+}
+.logo1{
+  background-color:black;
+  color: #fff;
+}
+.logo2{
+  background-color: lightblue;
+}
+.main{
+  max-width: 1200px;
+  margin: auto;
+
+}
+.title{
+  position: absolute;
+  top: 50%;
+  left:43%;
+  transform: -translate(-50%,-50%);
+}
+.title h1{
+  color: #fff;
+  font-size: 60px;
+  font-family: sans-serif;
+  left: 30%;
+}
+.footer {
+  position: static;
+  margin-top:1000px ;
+	font-family: monospace;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: LEFT;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<h1 class="logo1">Farmilk.com</h1>
+				<h3 class="logo2">Dairy Products of ur choice..</h3>
+				<div class="button">
+				<a href=""class="btn">LOGOUT</a>
+				<a href=""class="btn">CART</a>
+				</div>
+			</div>
+		</div>
+		<div class="navbar">
+  <a href="#">HOME</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">PRODUCTS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="milk.html">MILK</a>
+      <a href="sweets.html">SWEETS</a>
+      <a href="rmp.html">RAW MILK PRODUCTS</a>
+    </div>
+  </div>
+	<a href="articles.html">ARTICLES</a>
+	<a href="contact.html">CONTACT</a>
+</div>
+</header>
+{% block content %}
+
+
+{% endblock %}
+<div class="footer">
+	<p>OUR COMPANY</p>
+	<p>OUR TEAM</p>
+	<p>TERMS AND CONDITIONS</p>
+	<p>BLOGS</p>
+	<p>DEVELOPED BY</p>
+	</div>
+</body>
