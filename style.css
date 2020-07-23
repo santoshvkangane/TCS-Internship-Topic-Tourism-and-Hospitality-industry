@@ -1,0 +1,160 @@
+*{
+margin:0%;
+padding:0%;
+}
+header{
+font-style:monospace;
+background-image:url('t3.jpg');
+}
+.title{
+font-style:monospace;
+width:1500px;
+height:100px;
+padding:30px 20px 10px 5px;
+color:green;
+font-size:30px;
+/*border:2px solid red;*/
+}
+
+ul{
+float:right;
+display:inline-block;
+list-style-type:none;
+/*border:2px solid black;
+background-color:green;*/
+}
+
+ul li{
+font-size:20px;
+color:white;
+display:inline-block;
+padding:0px 20px 10px 100px;
+}
+
+a:link{
+color:white;
+}
+
+a:visited{
+color:green;
+}
+
+a:hover{
+color:yellow;
+}
+
+a:active{
+color:blue;
+}
+
+body{
+padding:0;
+margin:0;
+background-color: floralwhite;
+}
+
+.slide-frame{
+overflow:hidden;
+height:800px;
+width:1200px;
+margin-left:360px;
+margin-top:20px;
+}
+.slide-images{
+width:3600px;
+height:800px;
+margin:0 0 0 -2400px;
+position:relative;
+-webkit-animation-name:slide_animation;
+-webkit-animation-duration:33s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+}
+
+#img-container1{
+height:850px;
+width:1500px;
+position:relative;
+float:left;
+}
+#img-container2{
+height:850px;
+width:1500px;
+position:relative;
+float:left;
+}
+#img-container3{
+height:850px;
+width:1500px;
+position:relative;
+float:left;
+}
+#img-container4{
+height:850px;
+width:1500px;
+position:relative;
+float:left;
+}
+
+/* Slide animation */
+@-webkit-keyframes slide_animation{
+0%{left:0px;}
+10%{left:0px;}
+20%{left:1200px;}
+30%{left:1200px;}
+40%{left:2400px;}
+50%{left:2400px;}
+60%{left:1200px;}
+70%{left:1200px;}
+80%{left:0px;}
+90%{left:0px;}
+100%{left:0px;}
+}
+
+
+
+/*.back{
+width:1500px;
+height:850px;
+padding-left:200px;
+background-image:url('tree.jpg');
+background-repeat:no-repeat;
+background-size:100% 100%;
+}*/
+
+
+/*#services{
+float:left;
+width:250px;
+height:850px;
+background-size:100% 100%;
+background-color:powderblue;
+background-repeat:no-repeat;
+border:2px solid red;
+}*/
+
+
+/*#background{
+text-align:center;
+color:black;
+font-size:20px;
+margin: -21px 0px -2px 775px;
+width:750px;
+height:850px;
+background-color:brown;
+border:1px solid black;
+}*/
+.footer {
+  position: relative;
+  /*font-family: monospace;*/
+  text-color: red;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image:url('t6.jpg');
+  text-align: left;
+}
+p{
+font-size:20px;
+}

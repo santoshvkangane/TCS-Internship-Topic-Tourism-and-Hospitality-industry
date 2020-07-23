@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+h3{
+padding-top:100px;
+}
+
+.logo{
+  padding: 30px 10px 0px 60px ;
+}
+.logo1{
+  text-shadow:blue;
+  color: #fff;
+}
+.logo2{
+  font-size:42px;
+  color:white;
+  font-family:sans-serif;
+   padding: 30px 10px 0px 100px ;
+   text-decoration:underline;
+   text-shadow:2px 2px 12px yellow;
+}
+.button{
+  width:25%;
+  height:50vh;
+  float:left;
+  display:inline-block;
+  position: absolute;
+  float: center;
+  top:200px;
+  padding-top:20px;
+  margin-left:900px;
+  word-spacing:20px;
+  border-radius:120px;
+  background-image:url('s2.jpg');
+  background-size:cover;
+  background-repeat:No-repeat;
+ box-shadow: 0 8px 20px 0 rgba(0, 0, 0.4, 0.8), 0 10px 30px 0 rgba(0, 0, 0.5, 0.8);
+  line-height:15px;
+}
+.button1{
+padding-top:20px;
+
+}
+.btn1{
+  float:center;
+  color: #fff;
+  padding:10px 20px 10px 20px;
+  margin-left:130px;
+  background-color: #548;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.btn1:hover{
+background-color:green;
+}
+
+.btn2:hover{
+background-color:green;
+}
+.btn3:hover{
+background-color:green;
+}
+
+p{
+  padding-left:100px;
+  padding-top:35px;
+  font-family: century gothic;
+  font-style:italic;
+  font-size:12px;
+  color:white;
+  word-spacing:2px;
+  line-height:20px;
+}
+
+.textbox{
+  float-left;
+  position:absolute;
+  margin-left:-400px;
+  top:0px;
+  font-family: century gothic;
+  font-style:italic;
+  font-size:12px;
+  text-color:black;
+}
+h5{
+  position:absolute;
+  margin-left:-400px;
+  margin-top:-400px;
+  font-size:75px;
+  color:black;
+  text-shadow:2px 2px 5px red;
+  font-family:sans-serif;
+}
+
+.btn2{
+  float:center;
+  color: #fff;
+  padding:6px 30px 10px 30px;
+  margin-left:130px;
+  background-color: #548;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.btn3{
+  float:center;
+  color: #fff;
+  padding:10px 30px 10px 30px;
+  margin-left:130px;
+  background-color: #548;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+
+.btn:hover{
+  background-color: rgb(166, 179, 55);
+  color:#abc;
+}
+.table, td, th {
+  border: 2px solid black;
+}

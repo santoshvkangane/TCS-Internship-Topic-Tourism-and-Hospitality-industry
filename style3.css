@@ -1,0 +1,144 @@
+*{
+margin:0%;
+padding:0%;
+}
+
+.image{
+width:100%;
+height:80vh;
+background-image:url('o2.jpg');
+background-repeat:No-repeat;
+background-size:cover;
+}
+
+header{
+width:100%;
+height:20vh;
+border:1px solid red;
+background-attachment: relative;
+background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("t3.jpg");
+margin-left: 300px; /* Same as the width of the sidebar */
+margin-top:-10px;
+}
+.main{
+padding-top:10px;
+}
+img{
+margin:5px 5px 5px 40px;
+}
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 310px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    border-right:1px solid red;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("t3.jpg");
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    background-color:green;
+    color: rgb(27, 240, 63);
+  }
+  
+  /* Style page content */
+
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .admin{
+    margin-left:95px;
+    font-size: 30px;
+
+  }
+
+
+  .button{
+  margin-top:10px;
+  }
+
+   .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+    border-radius: 12px;
+  }
+
+  
+  .button1:hover {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 12px;
+  }
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 12px;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 12px;
+  }
+  .button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 12px;
+  }
+  
+  .button3:hover {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 12px;
+  }
+  .button4 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 12px;
+  }
+  
+  .button4:hover {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 12px;
+  }
+  .buttona {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  hr.hr1 { 
+    
+    color:rgba(28, 16, 204, 0.849);
+  }
+
+
