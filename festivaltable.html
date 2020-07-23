@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'table.css' %}">
+</head>
+<body>
+<div class="table1">
+<h1>Festival Entries:</h1>
+<table class="table table-dark table-hover">
+    <thead class="thread-dark">
+    <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>contact</th>
+    <th>Email ID</th>
+    <th>Festival name</th>
+    <th>Date</th>
+    <th>duration</th>
+    <th>Festival theme Description</th>
+    <th>Register</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for window in home %}
+    <tr>
+        <td>{{ window.fname }}</td>
+        <td>{{ window.lname }}</td>
+        <td>{{ window.contact }}</td>
+        <td>{{ window.email }}</td>
+        <td>{{ window.festtheme }}</td>
+        <td>{{ window.date }}</td>
+        <td>{{ window.duration }}</td>
+        <td>{{ window.themedesc }}</td>
+        <td><a href="/eventregister">REGISTER</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table><br>
+<a href="/Hmpage">Go To Homepage.</a>
+</div>
+</body>
+</html>

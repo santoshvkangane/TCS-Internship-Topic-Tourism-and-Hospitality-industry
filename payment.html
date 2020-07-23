@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event form</title>
+    <link rel="stylesheet" href="{% static 'reg.css' %}">
+
+    <script>
+    function suc()
+    {
+      alert(' Thank you for payment!!!!');
+    }
+  </script>
+</head>
+<body>
+<div class="page">
+<header>
+    <div id="logo"></div>
+    <h1>PAYMENT PAGE.....</h1>
+    <h5>Please fill appropriate information that will help us to explore more for you..</h5>
+</header>
+ <form method="POST" class="post-form" action="/payment">
+     {% csrf_token %}
+
+     <div class="inpage">
+          <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h1>CONFIRMATION PAGE</h1>
+            </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">First name:</label>
+                 {{ fname }}
+          </div>
+ <br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Last name:</label>
+                 {{ lname }}
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Email Id:</label>
+                 {{ email }}
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Event name:</label>
+                 {{ event }}
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Contact no:</label>
+                 {{ cont }}
+          </div>
+<br>
+
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Event fees:</label>
+                {{ eventfees }}
+          </div>
+<br>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Total amount:</label>
+                {{ totalamt }}
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label"></label>
+             <div class="col-sm-4">
+                 <button type="submit" onclick="suc()" class="btn btn-primary">DONE</button>
+             </div>
+          </div>
+    </div>
+ </form>
+</div>
+</body>
+</html>

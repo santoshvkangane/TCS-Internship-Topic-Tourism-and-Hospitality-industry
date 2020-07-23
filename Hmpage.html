@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+	<title>Tour.com</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" href="{% static 'hm.css' %}">
+<!--    <script language="JavaScript" type="text/javascript">-->
+<!--javascript:window.history.forward(1);-->
+
+<!--disableBackButton();-->
+<!--window.onload = disableBackButton();-->
+<!--window.onpageshow = function (evt) { if (evt.persisted) disableBackButton() }-->
+<!--window.onunload = function () { void (0) }-->
+<!--</script>-->
+
+</head>
+<body>
+<!--onload="disableBackButton()">-->
+<!-- Slideshow container -->
+<!--<div class="booktitle" style="color:green;background-color:white;">Advertisement by Tour.com</div>-->
+<div class="slideshow-container">
+  <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1/6</div>
+            <a href="/entertainmenttable"><button class="out">Register Now</button></a>
+            <img src="{% static 'mainpage.jpg' %}" style="width:100%;height:100%;">
+        <div class="text">ENTERTAINMENT</div>
+        </div>
+
+
+        <div class="mySlides fade">
+          <div class="numbertext">2/6</div>
+            <a href="/meetingtable"><button class="out">Register Now</button></a>
+            <img src="{% static 'meeting2.jpg' %}" style="width:100%;height:100%;">
+          <div class="text">MEETINGS</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3/6</div>
+            <a href="/exhibitiontable"><button class="out">Register Now</button></a>
+          <img src="{% static 'exhi.jpg' %}" style="width:100%;height:100%;">
+        <div class="text">EXHIBITION</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4/6</div>
+            <a href="/festivaltable"><button class="out">Register Now</button></a>
+          <img src="{% static 'festt.jpg' %}" style="width:100%;height:100%;">
+        <div class="text">FESTIVAL</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5/6</div>
+            <a href="/culturaltable"><button class="out">Register Now</button></a>
+           <img src="{% static 'cultural4.jpg' %}" style="width:100%;height:100%;">
+        <div class="text">CULTURAL<br>CELEBRATION</div>
+        </div>
+
+
+        <div class="mySlides fade">
+          <div class="numbertext">6/6</div>
+            <a href="/hospitalitytable"><button class="out">Register Now</button></a>
+           <img src="{% static 'hosp2.jpg' %}" style="width:100%;height:100%;">
+        <div class="text">HOSPITALITY</div>
+        </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10096;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+      <!-- The dots/circles -->
+      <div style="text-align:center;">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+<br>
+<div class="booktitle" style="color:black;background-color:powderblue;">....BOOKINGS ARE NOW OPEN , YOU CAN BOOK YOUR FAVOURITE EVENT &#9196;</div>
+<div class="booking">
+        <div class="book1">#Special offer &#9200;
+            <div class="off">20% OFF &#127379;</div>
+            <a href="/eventregister"><div class="click" style="width:130px;border:1px solid pink;padding:3px;height:40px;background-color:pink;align:center;margin-left:80px;">Apply &#128070;</div></a>
+            <div class="entertainment"> Let's enjoy buddy &#128123;</div>
+        </div>
+        <div class="about">
+            <h2> ENTERTAINMENT &#9208;&#9209;&#127911;&#127910;&#127908;&#127916;&#127912;&#127909;&#127918;&#129299;&#129321;</h2>
+            <p style="color:purple;padding-top:40px;padding-left:10px;">&#128073;Normal life can be stressful, and people need to relax. Being entertained by others is <br>a wonderful way to take some time out of life. It can reduce stress and make life's<br> issues easier to face. Even just a few hours can make a big difference .<br>Exhibition entertainment (museums, art shows, trade exhibitions ,fairs), Live entertainment<br> (theaters, circus, concert, dancing programs,fireworks etc ),Mass media entertainment industry<br> (Tv, radio, fashion industry, tv& radio broadcasting, web media entertainment,<br> film studios, etc etc you name it!)</p>
+        </div>
+            <div class="about1">
+             <h2 style="padding-top:-30px;"> HOSPITALITY &#127834;&#127832;&#127835;&#127836;&#127837;&#127839;</h2>
+             <p style="color:purple;padding-left:120px;padding-top:-30px;">&#128073;Hospitality is the relationship between a guest and a host, wherein the host receives <br>The guest with goodwill, including the reception and entertainment<br> of guests, visitors, or strangers. Louis, chevalier de Jaucourt describes <br>hospitality in the Encyclopédie as the virtue of a great soul that cares for the whole<br> universe through the ties of humanity.Hospitality is also the way <br>people treat others, that is the service of welcoming receiving guests <br> for example in hotels. Hospitality plays a fundamental role to augment<br> or decrease the volume of sales of an organization hence every business<br> should master it.</p>
+           </div>
+          <div class="book2" style="style:bold;size:30px;margin-top:100px;">#Special offer &#9200;
+            <div class="off1">50% OFF &#127379;</div>
+                <a href="/eventregister"><div class="click" style="width:130px;padding:3px;border:1px solid orange;height:40px;background-color:orange;align:center;margin-left:80px;">Apply &#128070;</div></a>
+            <div class="entertainment">H O S P I T A L I T Y &#128129;</div>
+          </div><br>
+ </div>
+<br><br><br>
+<script>
+var slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+</script>
+{% endblock %}
+
+</body>
+</html>

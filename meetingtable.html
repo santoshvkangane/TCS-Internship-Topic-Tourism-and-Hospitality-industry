@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'table.css' %}">
+</head>
+<body>
+<div class="table1">
+<h1>Meeting entries:</h1>
+<table class="table table-dark table-hover">
+    <thead class="thread-dark">
+    <tr>
+    <th> Meeting name</th>
+    <th> Meeting Head name</th>
+    <th> Meeting Head contact</th>
+    <th> Meeting venue</th>
+    <th> Meeting date</th>
+    <th> Meeting time</th>
+    <th> Total participants</th>
+    <th> Meeting duration</th>
+    <th> Meeting hall no.</th>
+    <th>Register</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for window in home %}
+    <tr>
+        <td>{{ window.meetingname }}</td>
+        <td>{{ window.meetinghead }}</td>
+        <td>{{ window.meetingheadmob }}</td>
+        <td>{{ window.meetingvenue }}</td>
+        <td>{{ window.meetingdate }}</td>
+        <td>{{ window.meetingtime }}</td>
+        <td>{{ window.totalmembers }}</td>
+        <td>{{ window.meetingduration }}</td>
+        <td>{{ window.meetinghallno }}</td>
+        <td><a href="/eventregister">REGISTER</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table><br>
+    <a href="/Hmpage">Go To Homepage.</a>
+</div>
+</body>
+</html>

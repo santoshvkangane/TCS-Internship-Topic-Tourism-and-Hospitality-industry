@@ -1,0 +1,40 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+
+    <link rel ="stylesheet" href="{% static '/signup.css' %}"/>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<script language="JavaScript" type="text/javascript">
+javascript:window.history.forward(1);
+
+disableBackButton();
+window.onload = disableBackButton();
+window.onpageshow = function (evt) { if (evt.persisted) disableBackButton() }
+window.onunload = function () { void (0) }
+</script>
+
+</head>
+<body onload="disableBackButton()">
+<form method="POST" action="/signup">
+    {% csrf_token %}
+
+  <div class="main">
+    <p class="sign" align="center"> REGISTER </p>
+      <br>
+    <form class="form1">
+      <input class="un " type="text" name="username" align="center" placeholder="Username" required><br>
+      <input class="pass" type="password" name="password" align="center" placeholder="Password" required><br>
+       <input class="pass" type="password" name="password2" align="center" placeholder="Confirm Password" required><br>
+        <button type="submit" value="submit" class="submit">Sign up</button>
+<!--        <p class="forgot" align="center"><a href="#">Forgot Password</a></p>-->
+        </form>
+    </div>
+
+
+</form>
+</body>
+</html>
+
+

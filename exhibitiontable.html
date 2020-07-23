@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'table.css' %}">
+</head>
+<body>
+<div class="table1">
+<h1>Exhibition Entries:</h1>
+<table class="table table-dark table-hover">
+    <thead class="thread-dark">
+    <tr>
+    <th>Company name</th>
+    <th>Company address</th>
+    <th>Company city</th>
+    <th>Company state</th>
+    <th>date</th>
+    <th>time</th>
+    <th>Company telephone</th>
+    <th>duration</th>
+    <th>Register</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for window in home1 %}
+    <tr>
+        <td>{{ window.cname }}</td>
+        <td>{{ window.cadd }}</td>
+        <td>{{ window.ccity }}</td>
+        <td>{{ window.cstate }}</td>
+        <td>{{ window.date }}</td>
+        <td>{{ window.time }}</td>
+        <td>{{ window.ctel }}</td>
+        <td>{{ window.duration }}</td>
+        <td><a href="/eventregister">REGISTER</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table><br>
+    <a href="/Hmpage">Go To Homepage.</a>
+</div>
+</body>
+</html>

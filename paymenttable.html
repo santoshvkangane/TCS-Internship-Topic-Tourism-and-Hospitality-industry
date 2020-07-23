@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'eventreg.css' %}">
+</head>
+<body>
+<div class="table1">
+<h1>Payment Entries:</h1>
+<table class="table table-dark table-hover">
+    <thead class="thread-dark">
+    <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Contact</th>
+    <th>Email ID</th>
+    <th>Event name</th>
+    <th>Gender</th>
+    <th>Event fees</th>
+    <th>Total Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{ fname }}</td>
+        <td>{{ lname }}</td>
+        <td>{{ cont }}</td>
+        <td>{{ email }}</td>
+        <td>{{ event }}</td>
+        <td>{{ gender }}</td>
+        <td>{{ eventfees }}</td>
+        <td>{{ totalamt }}</td>
+    </tr>
+    </tbody>
+</table><br><br>
+<a href="/Hmpage">Go To Homepage.</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'table.css' %}">
+</head>
+<body>
+<div class="table1">
+<h1>Hospitality entries:</h1>
+<table class="table table-dark table-hover">
+    <thead class="thread-dark">
+    <tr>
+    <th>Event name</th>
+    <th>Event Head name</th>
+    <th>Event Head Contact</th>
+    <th>Food category</th>
+    <th>Food name</th>
+    <th>Event venue</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Duration</th>
+    <th>Total members</th>
+    <th>Register</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for window in home %}
+    <tr>
+        <td>{{ window.ename }}</td>
+        <td>{{ window.eholdername }}</td>
+        <td>{{ window.contact }}</td>
+        <td>{{ window.foodtype }}</td>
+        <td>{{ window.foodname }}</td>
+        <td>{{ window.evenue }}</td>
+        <td>{{ window.date }}</td>
+        <td>{{ window.time }}</td>
+        <td>{{ window.duration }}</td>
+        <td>{{ window.total }}</td>
+        <td><a href="/eventregister">REGISTER</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table><br>
+<a href="/Hmpage">Go To Homepage.</a></div>
+</body>
+</html>

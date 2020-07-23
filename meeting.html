@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>meeting</title>
+    <link rel="stylesheet" href="{% static 'meet.css' %}">
+    <script>
+    function suc()
+    {
+      alert('Registered Successfully!!!!');
+    }
+</script>
+</head>
+<body>
+<h2>Meeting page</h2>
+
+<form method="POST" class="post-form" action="/meeting">
+     {% csrf_token %}
+<div class="outdiv">
+     <div class="inpage">
+          <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h1>Enter Details</h1>
+            </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting name:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetingname }}
+             </div>
+          </div>
+<br>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting Head name:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetinghead }}
+             </div>
+          </div>
+<br>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting Head Contact:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetingheadmob }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting Venue:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetingvenue }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting date:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetingdate }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting Time:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetingtime }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Total Members:</label>
+             <div class="col-sm-4">
+                {{ meet.totalmembers }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting Duration:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetingduration }}
+             </div>
+          </div>
+ <br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Meeting Hall Number:</label>
+             <div class="col-sm-4">
+                 {{ meet.meetinghallno }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label"></label>
+             <div class="col-sm-4">
+                 <button type="submit" onclick="suc()" class="btn btn-primary">Submit</button>
+             </div>
+          </div>
+    </div>
+</div>
+</form>
+
+</body>
+</html>

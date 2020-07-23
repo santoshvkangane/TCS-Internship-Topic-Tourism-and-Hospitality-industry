@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+    <link rel ="stylesheet" href="{% static '/user.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body bgcolor="white">
+<div class="bk">
+ <h1 style="background-color:DodgerBlue;">Welcome, Here is the list of your users... </h1>
+<table class="table table-dark table-hover">
+    <thead class="thread-dark">
+    <tr>
+    <th> Customer Username</th>
+    <th> Customer Password</th>
+    </tr>
+    </thead>
+        <tbody>
+    {% for window in home %}
+    <tr>
+        <td>{{ window.username }}</td>
+        <td>{{ window.password }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+</div>
+<a href="/admin">GO BACK TO ADMIN PAGE</a>
+</body>
+</html>

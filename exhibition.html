@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exhibition</title>
+    <link rel="stylesheet" href="{% static 'meet.css' %}">
+    <script>
+    function suc()
+    {
+      alert('Registered Successfully!!!!');
+    }
+    </script>
+</head>
+<body>
+<h2>Exhibition page</h2>
+
+ <form method="POST" class="post-form" action="/exhibition">
+     {% csrf_token %}
+<div class="outdiv">
+     <div class="inpage">
+          <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h1>Enter Details</h1>
+            </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Company name:</label>
+             <div class="col-sm-4">
+                 {{ meet.cname }}
+             </div>
+          </div>
+<br>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Company address:</label>
+             <div class="col-sm-4">
+                 {{ meet.cadd }}
+             </div>
+          </div>
+<br>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Company city:</label>
+             <div class="col-sm-4">
+                 {{ meet.ccity }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Company state:</label>
+             <div class="col-sm-4">
+                 {{ meet.cstate }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Exhibition date:</label>
+             <div class="col-sm-4">
+                 {{ meet.date }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Exhibition Time:</label>
+             <div class="col-sm-4">
+                 {{ meet.time }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Exhibition Duration[Hours]:</label>
+             <div class="col-sm-4">
+                {{ meet.duration }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Telephone:</label>
+             <div class="col-sm-4">
+                 {{ meet.ctel }}
+             </div>
+          </div>
+ <br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label"></label>
+             <div class="col-sm-4">
+                 <button type="submit" onclick="suc()" class="btn btn-primary">Submit</button>
+             </div>
+          </div>
+    </div>
+</div>
+ </form>
+
+</body>
+</html>

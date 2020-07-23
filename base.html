@@ -1,48 +1,63 @@
+{% load static %}
 <html>
 <head>
-	<title>Farmilk.com</title>
-
+	<title>Welcome buddy...</title>
 	<style media="screen">
 	*{
 
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-left: 0px;
+		margin-right: 0px;
 	  padding: 0%;
 	  font-family: century gothic;
-
-	}/*for all*/
-	header{
-	  background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("bg8.jpg");
-	  height: 40%;
-	  background-size: cover;
-	  background-position: center;
-		position:relative;
-
 	}
 
+header{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("{% static 'aa1.jpg' %}");
+    width:100%;
+    position:fixed;
+    top:0px;
+    background-size: cover;
+	background-position: center;
+	position:relative;
+	background-attachment:fixed;
+	}
 
-	.navbar {
+	h3{
+  color: black;
+  text-shadow:2px 2px 10px powderblue;
+  font-size:25px;
+  font-family:sans-serif;
+	}
+
+.navbar {
 overflow: hidden;
-background-color: #333;
 font-family: Arial;
-background: transparent;
-padding-left: 40px;
+padding-top:10px;
+padding-left: 120px;
 }
 
 /* Links inside the navbar */
 .navbar a {
 float: left;
-font-size: 16px;
-color: white;
+font-size: 21px;
+color: black;
+text-shadow:4px 4px 15px yellow;
+font-weight:bold;
+font-family:sans-serif;
 text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+margin-left:100px;
+margin-top:40px;
+text-decoration: underline;
 }
 
+ a:hover{
+color:red+;
+}
 /* The dropdown container */
 .dropdown {
 float: left;
 overflow: hidden;
+padding:2px;
 }
 
 /* Dropdown button */
@@ -50,7 +65,7 @@ overflow: hidden;
 font-size: 16px;
 border: none;
 outline: none;
-color: white;
+color: orange;
 padding: 14px 16px;
 background-color: inherit;
 font-family: inherit; /* Important for vertical align on mobile phones */
@@ -58,9 +73,10 @@ margin: 0; /* Important for vertical align on mobile phones */
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn {
 background-color: red+;
 }
+
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
@@ -76,6 +92,7 @@ z-index: 1;
 .dropdown-content a {
 float: none;
 color: black;
+margin:0px;
 padding: 12px 16px;
 text-decoration: none;
 display: block;
@@ -84,23 +101,54 @@ text-align: left;
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-background-color: #ddd;
+background-color: green;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
+margin-top:70px;
+margin-left:150px;
 display: block;
 }
 .logo{
-  padding: 4px 700px 0px 30px ;
+  padding: 14px 700px 0px 30px ;
 }
 .logo1{
-  background-color:black;
-  color: #fff;
+margin-left:10px;
+  margin-top:70px;
+  color: black;
+  text-shadow:4px 4px 10px yellow;
+  font-size:37px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
 }
 .logo2{
   background-color: lightblue;
 }
+body{
+background-color:powderblue;
+}
+.book2{
+float:right;
+width:300px;
+height:320px;
+margin-right:200px;
+margin-top:50px;
+text-align:center;
+color:red;
+background-color:powderblue;
+padding-top:0px;
+font-size:20px;
+font-family: serif;
+text-shadow:2px 2px 5px black;
+border:1px solid black;
+box-shadow: 0 8px 16px 0 rgba(0.5,0,0,0.2), 0 6px 20px 0 rgba(0.5,0,0,0.19);
+background-image:url('event3.jpg');
+background-size:cover;
+background-repeat:No-repeat;
+}
+
+
 .main{
   max-width: 1200px;
   margin: auto;
@@ -118,57 +166,70 @@ display: block;
   font-family: sans-serif;
   left: 30%;
 }
-.footer {
-  position: static;
-  margin-top:1000px ;
-	font-family: monospace;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: LEFT;
+.rhead a{
+margin-top:20px;
+margin-left:250px;
+display:inline-block;
+}
+.footer{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("{% static 't1.jpg' %}");
+	height: 22%;
+	background-size: cover;
+	padding-left:10px;
+	padding:top:50px;
+	text-color:black;
+}
+p{
+ color:white;
+ padding-top:14px;
 }
 </style>
 </head>
 <body>
-	<header>
+<header>
+		<div class="bkg">
 		<div class="main">
 			<div class="logo">
-				<h1 class="logo1">Farmilk.com</h1>
-				<h3 class="logo2">Dairy Products of ur choice..</h3>
+				<h1 class="logo1">Tourism and Hospitality Industry Management &#127540;</h1>
+				<br>
 				<div class="button">
-				<a href=""class="btn">LOGOUT</a>
-				<a href=""class="btn">CART</a>
+					<h3 style="text-transform:uppercase;"><u>Hello,&nbsp;{{ msg1 }} &#128515;</u></h3>
+					<div class="rhead">
+						<br><br><a href="/mainpage"class="btn">LOGOUT</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="navbar">
-  <a href="#">HOME</a>
+<div class="navbar">
+  <a href="/Hmpage">HOME</a>
 
   <div class="dropdown">
-    <button class="dropbtn">PRODUCTS
-      <i class="fa fa-caret-down"></i>
-    </button>
+	  <a>EVENTS</a>
     <div class="dropdown-content">
-      <a href="milk.html">MILK</a>
-      <a href="sweets.html">SWEETS</a>
-      <a href="rmp.html">RAW MILK PRODUCTS</a>
+      <a href="/eventregister">Meeting</a>
+      <a href="/eventregister">Exhibition</a>
+      <a href="/eventregister">Festival</a>
+      <a href="/eventregister">Cultural Celebration</a>
+      <a href="/eventregister">Entertainment</a>
+      <a href="/eventregister">Hospitality</a>
     </div>
   </div>
-	<a href="articles.html">ARTICLES</a>
-	<a href="contact.html">CONTACT</a>
+	<a href="/article">ARTICLES</a>
+	<a href="/contact">CONTACT</a>
+</div>
 </div>
 </header>
 {% block content %}
 
 
 {% endblock %}
+
 <div class="footer">
-	<p>OUR COMPANY</p>
-	<p>OUR TEAM</p>
-	<p>TERMS AND CONDITIONS</p>
-	<p>BLOGS</p>
-	<p>DEVELOPED BY</p>
-	</div>
+	<br><br>
+	<p style="padding-left:50px;">OUR COMPANY: Event management pvt.Ltd.</p><br><br>
+	<p style="padding-left:50px;">TERMS AND CONDITIONS:</p><br><br>
+	<p style="padding-left:50px;">CONTACT: 9730488062</p><br><br>
+	<p style="padding-left:50px;">DEVELOPED BY: Santosh kangane</p><br>
+</div>
 </body>
+</html>

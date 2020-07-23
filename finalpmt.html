@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event form</title>
+    <link rel="stylesheet" href="{% static 'reg.css' %}">
+
+    <script>
+    function suc()
+    {
+      alert(' You have Registered Successfully!!!!');
+    }
+  </script>
+</head>
+<body>
+<div class="page">
+<header>
+    <div id="logo"></div>
+    <h1> FINAL PAYMENT PAGE.....</h1>
+    <h5>Please fill appropriate information that will help us to explore more for you..</h5>
+</header>
+ <form method="POST" class="post-form" action="/finalpmt">
+     {% csrf_token %}
+
+     <div class="inpage">
+          <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h1>Enter Details</h1>
+            </div>
+          </div>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Payment options:</label>
+                {{ meet.pmt }}
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label"></label>
+             <div class="col-sm-4">
+                 <button type="submit" onclick="return confirm('Are you sure you want to Submit');" class="btn btn-primary">PROCEED TO PAY</button>
+             </div>
+          </div>
+    </div>
+ </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'eventreg.css' %}">
+</head>
+<body>
+<div class="table1">
+<h1>Registration Entries:</h1>
+<table class="table table-dark table-hover">
+    <thead class="thread-dark">
+    <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Contact</th>
+    <th>Email ID</th>
+    <th>Event name</th>
+    <th>Gender</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for window in home %}
+    <tr>
+        <td>{{ window.Firstname }}</td>
+        <td>{{ window.Lastname }}</td>
+        <td>{{ window.Contact }}</td>
+        <td>{{ window.EmailId }}</td>
+        <td>{{ window.ename }}</td>
+        <td>{{ window.Gender }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table><br><br>
+<a href="/Hmpage">Go To Homepage.</a>
+</div>
+</body>
+</html>

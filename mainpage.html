@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel ="stylesheet" href="{% static 'mainpg.css' %}">
+    <link rel ="stylesheet" href="{% static 'bk.css' %}">
+</head>
+<body>
+    <div class="bkimg">
+	<header>
+		<div class="logoo">
+			<h3 style="font-size:42px;color:black;font-family:sans-serif;padding: 30px 10px 0px 100px;text-decoration:underline;text-shadow:2px 2px 12px yellow;">EVENT MANAGEMENT IN TOURISM AND HOSPITALITY INDUSTRY</h3>
+		</div>
+	</header>
+	</div>
+<br>
+<div class="button">
+	<div class="button1">
+		<p>Create account>></p><br>
+		<a href="/signup" class="btn1">REGISTER</a>
+		<p>Do you already have an account?</p><br>
+		<a href="/signin" class="btn2">LOGIN</a>
+		<p>Admin login..>></p><br>
+		<a href="/signin" class="btn3">ADMIN</a>
+	</div>
+</div>
+	<div id="textbox">
+		<h5 style="padding-left:600px;padding-top:70px;">Hey,great to see you</h5>
+	</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Festival</title>
+    <link rel="stylesheet" href="{% static 'meet.css' %}">
+    <script>
+    function suc()
+    {
+      alert('Registered Successfully!!!!');
+    }
+    </script>
+
+</head>
+<body>
+<h2>Festival page</h2>
+
+ <form method="POST" class="post-form" action="/festival">
+     {% csrf_token %}
+<div class="outdiv">
+     <div class="inpage">
+          <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h1>Enter Details</h1>
+            </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">First name:</label>
+             <div class="col-sm-4">
+                 {{ meet.fname }}
+             </div>
+          </div>
+<br>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Last name:</label>
+             <div class="col-sm-4">
+                 {{ meet.lname }}
+             </div>
+          </div>
+<br>
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Contact:</label>
+             <div class="col-sm-4">
+                 {{ meet.contact }}
+             </div>
+         </div>
+<br>
+
+         <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Email id:</label>
+             <div class="col-sm-4">
+                 {{ meet.email }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Festival theme:</label>
+             <div class="col-sm-4">
+                 {{ meet.festtheme }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Date:</label>
+             <div class="col-sm-4">
+                 {{ meet.date }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Duration[days]:</label>
+             <div class="col-sm-4">
+                 {{ meet.duration }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label">Theme Description:</label>
+             <div class="col-sm-4">
+                {{ meet.themedesc }}
+             </div>
+          </div>
+<br>
+          <div class="form-group-row">
+             <label class="col-sm-2 col-form-label"></label>
+             <div class="col-sm-4">
+                 <button type="submit" onclick="suc()" class="btn btn-primary">Submit</button>
+             </div>
+          </div>
+    </div>
+</div>
+ </form>
+
+</body>
+</html>
